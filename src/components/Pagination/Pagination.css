@@ -2,7 +2,7 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
-	max-width: 500px;
+	max-width: 855px;
 	flex-wrap: wrap;
 	padding-inline: 10px;
 	gap: 15px;
@@ -18,6 +18,7 @@
 	text-align: center;
 	background-color: var(--grey);
 	overflow: hidden;
+	transition: filter 250ms ease;
 }
 .pagination__list--item:hover {
 	filter: brightness(1.3);

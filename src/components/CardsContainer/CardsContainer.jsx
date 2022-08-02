@@ -12,7 +12,7 @@ const CardsContainer = () => {
 	const paginationRedux = useSelector(state => state.pagination);
 	const [loading, setLoading] = useState(true);
 	const [currentPage, setCurrentPage] = useState(1);
-	const [gamesPerPage] = useState(36);
+	const [gamesPerPage] = useState(20);
 
 	const handleChangePage = num => setCurrentPage(num);
 
@@ -27,29 +27,28 @@ const CardsContainer = () => {
 	const indexOfLastPost = currentPage * gamesPerPage;
 	const indexOfFirstPost = indexOfLastPost - gamesPerPage;
 	const currentGames = gamesRedux.slice(indexOfFirstPost, indexOfLastPost);
-
 	return (
-		<div>
+		<>
 			<Pagination
 				gamesPerPage={gamesPerPage}
 				handleChangePage={handleChangePage}
 			/>
-			<div>
+			<>
 				{loading ? (
 					<Spinner />
 				) : (
 					<div className="cardsContainer">
-						{currentGames?.map(game => {
+						{currentGames.map(game => {
 							return <Card data={game} key={game.id} />;
 						})}
 					</div>
 				)}
-			</div>
+			</>
 			<Pagination
 				gamesPerPage={gamesPerPage}
 				handleChangePage={handleChangePage}
 			/>
-		</div>
+		</>
 	);
 };
 

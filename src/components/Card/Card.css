@@ -6,6 +6,9 @@
 	border-radius: 10px;
 	overflow: hidden;
 	margin-inline: auto;
+	box-shadow: 1px 1px 12px -1px rgba(0, 172, 181, 0.2);
+	-webkit-box-shadow: 1px 1px 12px -1px rgba(0, 173, 181, 0.2);
+	-moz-box-shadow: 1px 1px 12px -1px rgba(0, 173, 181, 0.2);
 }
 
 .card--img {
@@ -43,7 +46,13 @@
 	margin-top: 10px;
 	padding-inline: 10px;
 	height: 30px;
+	transition: filter 250ms ease;
 }
+
+.card__content--button:hover {
+	filter: brightness(1.1);
+}
+
 .card__content--button p {
 	color: var(--black);
 	font-size: 16px;
