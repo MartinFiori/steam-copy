@@ -1,4 +1,3 @@
-import "./App.css";
 import AppRouter from "./components/AppRouter/AppRouter.jsx";
 
 function App() {

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./CardsContainer.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllGames } from "../../Redux/actions";
 import Card from "../Card/Card";
@@ -44,6 +45,10 @@ const CardsContainer = () => {
 					</div>
 				)}
 			</div>
+			<Pagination
+				gamesPerPage={gamesPerPage}
+				handleChangePage={handleChangePage}
+			/>
 		</div>
 	);
 };

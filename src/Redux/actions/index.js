@@ -118,6 +118,13 @@ export const setFilters = (filter, filterType) => async dispatch => {
 // 		}
 // 	};
 
+export const changePage = page => dispatch => {
+	dispatch({
+		type: actions.CHANGE_PAGE,
+		payload: page,
+	});
+};
+
 export const resetFilters = filters => async dispatch => {
 	try {
 		dispatch({

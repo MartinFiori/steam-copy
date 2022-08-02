@@ -10,7 +10,7 @@
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
-	border-left-color: blue;
+	border-left-color: var(--lg-blue);
 
 	animation: spin 1s linear infinite;
 }

@@ -10,13 +10,7 @@ const initialState = {
 		category: "",
 		sorted: "",
 	},
-	pagination: {
-		currentPage: 1,
-		gamesPerPage: 15,
-		totalPages: 0,
-		prev: "",
-		next: "",
-	},
+	actualPage: 1,
 };
 
 function rootReducer(state = initialState, { type, payload }) {
@@ -46,6 +40,11 @@ function rootReducer(state = initialState, { type, payload }) {
 			return {
 				...state,
 				favoriteGames: [...state.favoriteGames, payload],
+			};
+		case actions.CHANGE_PAGE:
+			return {
+				...state,
+				actualPage: payload,
 			};
 		case actions.SET_FILTERS:
 			return {
