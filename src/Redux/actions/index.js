@@ -30,27 +30,9 @@ export const getAllGames = url => async dispatch => {
 		.catch(function (error) {
 			console.error(error);
 		});
-	// try {
-	// 	const request = await fetch(url, options("GET"));
-	// 	const games = await request.json();
-	// 	dispatch({
-	// 		type: actions.GET_GAMES,
-	// 		payload: games,
-	// 	});
-	// } catch (err) {
-	// 	console.log(err);
-	// }
 };
 
 export const getGameDetail = game_id => async dispatch => {
-	// try {
-	// axios("https://mmo-games.p.rapidapi.com/game/?id=" + game_id, options).then(
-	// 	res =>
-	// 		dispatch({
-	// 			type: actions.GET_GAME_DETAILS,
-	// 			payload: res.data,
-	// 		})
-	// );
 	fetch("https://mmo-games.p.rapidapi.com/game?id=" + game_id, optionsFetch)
 		.then(response => response.json())
 		.then(res =>
@@ -59,9 +41,6 @@ export const getGameDetail = game_id => async dispatch => {
 				payload: res,
 			})
 		);
-	// } catch (err) {
-	// 	console.log(err);
-	// }
 };
 
 export const addWhislist = game_id => async dispatch => {
@@ -93,30 +72,6 @@ export const setFilters = (filter, filterType) => async dispatch => {
 	}
 };
 
-// export const setPagination =
-// 	(pagination, allGames_length) => async dispatch => {
-// 		try {
-// 			console.log(allGames_length);
-// 			pagination.totalPages = allGames_length / pagination.gamesPerPage;
-// 			let pages = [...Array(pagination.totalPages)].map(
-// 				(el, i) => (el = i + 1)
-// 			);
-// 			pagination.prev = pages.slice(
-// 				pagination.actualPage - pagination.pagesAside + 1,
-// 				pagination.pagesAside
-// 			);
-// 			pagination.next = pages.slice(
-// 				pagination.actualPage,
-// 				pagination.pagesAside + 1
-// 			);
-// 			dispatch({
-// 				type: actions.SET_PAGINATION,
-// 				payload: pagination,
-// 			});
-// 		} catch (err) {
-// 			console.log(err);
-// 		}
-// 	};
 
 export const changePage = page => dispatch => {
 	dispatch({
