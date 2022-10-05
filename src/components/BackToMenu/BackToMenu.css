@@ -1,0 +1,15 @@
+.backToMenu{
+  position: absolute;
+  color: var(--black);
+  top: 30px;
+  left: 50px;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  padding: 1em;
+  background: var(--lg-blue);
+  font-weight: bold;
+}
+
+.backToMenu:hover{
+	filter: brightness(1.1);
+}

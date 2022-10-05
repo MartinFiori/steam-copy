@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import BackToMenu from "../BackToMenu/BackToMenu";
 import "./DetailItem.css";
 
 const DetailItem = ({
 	data: {
 		developer,
 		genre,
-		id,
+		// id,
 		minimum_system_requirements,
 		platform,
 		publisher,
@@ -21,6 +22,7 @@ const DetailItem = ({
 	const [activeImage, setActiveImage] = useState(null);
 	return (
 		<div className="detailContainer">
+			<BackToMenu path={'/'} text='Back to menu'/>
 			<div className="detailInfo">
 				<p className="detailInfo--background">{title}</p>
 				<aside className="asideInfo">
@@ -56,7 +58,7 @@ const DetailItem = ({
 						</li>
 						<li>
 							<p>game's page: </p>
-							<span>{game_url}</span>
+							<a href={game_url} target='_blank'>{game_url}</a>
 						</li>
 					</ul>
 				</section>

@@ -23,12 +23,12 @@ const CardsContainer = () => {
 
 	const handleChangePage = num => setCurrentPage(num);
 
-	const handleChangeFilter = e => {
-		setFilter({
-			...filter,
-			[e.target.name]: e.target.value,
-		});
-	};
+	// const handleChangeFilter = e => {
+	// 	setFilter({
+	// 		...filter,
+	// 		[e.target.name]: e.target.value,
+	// 	});
+	// };
 
 	useEffect(() => {
 		!gamesRedux.length &&

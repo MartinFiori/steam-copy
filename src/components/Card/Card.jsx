@@ -12,7 +12,7 @@ const Card = ({ data: { id, title, thumbnail, short_description } }) => {
 				<p className="card__content--description">{short_description}</p>
 				<Link to={`game/${id}`} className="card__content--button">
 					<FaGamepad size={"24px"} fill={"var(--black)"} />
-					<p>Ver más</p>
+					<p>More info</p>
 				</Link>
 			</div>
 		</div>
